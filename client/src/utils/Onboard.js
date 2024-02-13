@@ -98,15 +98,15 @@ export async function SwitchNetwork() {
   await window?.ethereum?.request({
     method: 'wallet_addEthereumChain',
     params: [{
-      chainId: '0xA869',
-      chainName: 'Fuji C-Chain',
+      chainId: '0xa86a',
+      chainName: 'Avalanche C-Chain',
       nativeCurrency: {
         name: 'AVAX',
         symbol: 'AVAX',
         decimals: 18,
       },
-      rpcUrls: ['https://api.avax-test.network/ext/bc/C/rpc'],
-      blockExplorerUrls: ['https://testnet.snowtrace.io'],
+      rpcUrls: ['https://rpc.ankr.com/avalanche'],
+      blockExplorerUrls: ['https://snowtrace.io/'],
     }],
   }).catch((error) => {
     console.log(error);
